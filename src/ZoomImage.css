@@ -1,13 +1,12 @@
 .container {
     display: flex;
     gap: 20px;
-    /* Space between the original image and zoom panel */
 }
 
 .imageWrapper {
     position: relative;
-    width: 540px;
-    height: 540px;
+    width: 340px;
+    height: 340px;
     overflow: hidden;
 }
 
@@ -18,10 +17,19 @@
 }
 
 .zoomPanel {
-    width: 850px;
-    height: 850px;
+    width: 1250px;
+    height: 1250px;
     background-repeat: no-repeat;
     background-size: 200%;
-    /* Adjust based on your zoom level */
     border: 1px solid #ccc;
+}
+
+.highlight {
+    position: absolute;
+    width: 100px; /* Size of the highlight box */
+    height: 100px;
+    border: 2px solid #ff0000; /* Red border to indicate highlight */
+    pointer-events: none; /* Ensures the highlight doesn't interfere with mouse events */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8); /* Add some glow for better visibility */
+    transform: translate(-50%, -50%); /* Center the highlight box at the cursor */
 }
